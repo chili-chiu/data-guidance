@@ -42,16 +42,17 @@ For data in Zarr format, the metadata defined by [OME-Zarr](https://ngff.openmic
 <br>
 
 **For general images:**
-- All metadata are stored at the OME-Zarr root level.
+- All metadata are stored at the OME-Zarr root level. The metadata can be stored in separate json file(s) unless specified in OME-Zarr.
 
 **For high content screening (HCS):**
+- All metadata are stored at the OME-Zarr root level. The metadata can be stored in separate json file(s) unless specified in OME-Zarr.
 - Plate-level metadata: data description, instrument, acquisition.  
 - Well-level metadata: subject, procedure, channel description.
 
 **For CryoET data:**
 - The full set of metadata for CryoET data is described [here](TBD). <br>
 
-The mapping of CryoET data and DCA data to the XMS is specified [here](TBD).
+The mapping of CryoET data and DCA data to the XMS is specified [here](https://github.com/chanzuckerberg/data-guidance/blob/main/standards/imaging/1.0.0/XMS_mapping.md).
 
 ## Data description
 Administrative metadata about the source of the data, funding, relevant licenses, and restrictions on use.
@@ -121,7 +122,9 @@ Security & Compliance Metadata and Technical Metadata outlined in the [Data regi
     </tr>
     <tr>
       <th>Value</th>
-        <td><code>datetime</code>
+        <td><code>datetime</code> string formatted according to 
+      <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO&nbsp;8601</a> 
+      (e.g., <code>YYYY-MM-DD</code> in UTC).</td>
         </td>
     </tr>
 </tbody></table>
@@ -205,15 +208,15 @@ Metadata about any procedures performed prior to data acquisition, including sub
 </tbody></table>
 <br>
 
-### label
+### probe
 <table><tbody>
     <tr>
       <th>Key</th>
-      <td>label</td>
+      <td>probe</td>
     </tr>
     <tr>
       <th>Description</th>
-      <td>Labels such as fluorescent proteins, dyes, or antibodies used.</td>
+      <td>Probes such as fluorescent proteins, dyes, or antibodies used.</td>
     </tr>
     <tr>
       <th>Annotator</th>
@@ -236,7 +239,7 @@ Metadata about any procedures performed prior to data acquisition, including sub
     </tr>
     <tr>
       <th>Description</th>
-      <td>Proteins or other biomolecules tagged with labels.</td>
+      <td>Proteins or other biomolecules tagged with probes.</td>
     </tr>
     <tr>
       <th>Annotator</th>

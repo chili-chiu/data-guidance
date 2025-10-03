@@ -38,7 +38,7 @@ The following descriptive metadata are associated with all imaging datasets to e
 - **Channel description** — per-channel settings.  
 <br>
 
-For data in Zarr format, the metadata defined by [OME-Zarr](https://ngff.openmicroscopy.org/0.1/) SHOULD be implemented.<br>
+For data in Zarr format, the metadata defined by [OME-Zarr](https://ngff.openmicroscopy.org/latest/) SHOULD be implemented.<br>
 <br>
 
 **For general images:**
@@ -49,10 +49,11 @@ For data in Zarr format, the metadata defined by [OME-Zarr](https://ngff.openmic
 - Plate-level metadata: data description, instrument, acquisition.  
 - Well-level metadata: subject, procedure, channel description.
 
-**For CryoET data:**
+**For specific imaging modalities and projects:**
 - The full set of metadata for CryoET data is described [here](TBD). <br>
+- The Dynamic Cell Atlas (DCA) project data spec is desbribed [here](https://chanzuckerberg.github.io/dynamic-cell-atlas-specs/). <br>
 
-The mapping of CryoET data and DCA data to the XMS is specified [here](https://github.com/chanzuckerberg/data-guidance/blob/main/standards/imaging/1.0.0/XMS_mapping.md).
+The mapping of CryoET data and DCA data to the cross-modality schema is specified [here](https://github.com/chanzuckerberg/data-guidance/blob/main/standards/imaging/1.0.0/XMS_mapping.md).
 
 ## Data description
 Administrative metadata about the source of the data, funding, relevant licenses, and restrictions on use.
@@ -77,7 +78,7 @@ Security & Compliance Metadata and Technical Metadata outlined in the [Data regi
     <tr>
       <th>Value</th>
         <td><code>List[String]</code>. 
-         The List element MUST be a term in <a href="https://webprotege.stanford.edu/#projects/ee9f28eb-bcfe-469d-a9b4-48929f100eec/edit/Classes">the imaging methods list </a>.
+         The List element MUST be a term in <a href="[https://tinyurl.com/63p8k9kf]">the imaging methods list </a>.
         </td>
     </tr>
 </tbody></table>
@@ -134,7 +135,7 @@ Security & Compliance Metadata and Technical Metadata outlined in the [Data regi
 Metadata describing the subject being imaged: Species, genotype, age, sex, and source.
 
 Cross-modality metadata: 
-[Cross-modality schema metadata](https://github.com/chanzuckerberg/data-guidance/tree/main/standards/cross-modality) are captured here.
+[Cross-modality schema metadata 1.1.0](https://github.com/chanzuckerberg/data-guidance/tree/main/standards/cross-modality/1.1.0) are captured here.
 
 
 ### non_biological_subject
